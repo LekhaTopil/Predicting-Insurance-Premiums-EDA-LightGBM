@@ -22,9 +22,9 @@ In this Kaggle competition, I developed a LightGBM regression model to predict i
 
 🎯 **Final Results:** 
 
-•	Initial RMSLE Score: **1.15912**
+•	**Initial RMSLE Score:** **1.15912**
 
-•	Optimized RMSLE Score: **1.07849**
+•	**Optimized RMSLE Score:** **1.07849**
 
 🔹 **Dataset Details**
 
@@ -34,7 +34,6 @@ In this Kaggle competition, I developed a LightGBM regression model to predict i
 
 •	**Target Variable:** **premium_amount**
 
-• **Metric:**  **RMSLE**
 
 **Approach & Methodology**  
 
