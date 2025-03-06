@@ -1,12 +1,12 @@
-**Insurance Premium Prediction - Kaggle Competition**
+# **Insurance Premium Prediction - Kaggle Competition**
 
-🚀 **Machine Learning | LightGBM | Feature Engineering | Hyperparameter Tuning**
+## 🚀 **Machine Learning | LightGBM | Feature Engineering | Hyperparameter Tuning**
 
-**Project Overview**
+## **Project Overview**
 
 In this Kaggle competition, I developed a LightGBM regression model to predict insurance premiums, **achieving an RMSLE score of 1.07**. The dataset consisted of **1.4M** training and **800K** test observations, requiring extensive EDA, missing value handling (**3% to 30%**), and feature engineering—with **four features ranking in the top 10** for model importance.
 
-🔹 **Key Techniques Used:**
+## 🔹 **Key Techniques Used:**
 
 •	**Exploratory Data Analysis (EDA):** Identified data distribution, outliers, and feature relationships.
 
@@ -20,13 +20,13 @@ In this Kaggle competition, I developed a LightGBM regression model to predict i
 
 •	**Stratified Sampling for Model Training:** Ensured balanced representation of premium amounts.
 
-🎯 **Final Results:** 
+## 🎯 **Final Results:** 
 
 •	**Initial RMSLE Score:** **1.15912**
 
 •	**Optimized RMSLE Score:** **1.07849**
 
-🔹 **Dataset Details**
+## 🔹 **Dataset Details**
 
 •	**Train Set:** **1.4M** observations
 
@@ -35,7 +35,7 @@ In this Kaggle competition, I developed a LightGBM regression model to predict i
 •	**Target Variable:** **premium_amount**
 
 
-**Approach & Methodology**  
+## **Approach & Methodology**  
 
 ✔ **Data Preprocessing:** Cleaned missing values and optimized categorical encoding.
 
