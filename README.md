@@ -18,13 +18,15 @@ This notebook documents my approach and learnings from participating in a Kaggle
 * **Weak Correlation with Target Variable:** The dataset lacks strong linear relationships with the target variable. For instance, the highest observed correlation was just **0.047** between previous_claim and premium_amount, indicating minimal direct predictive power.
 
 ## **Approach**
-* To address these challenges and enhance model performance:
+To address these challenges and enhance model performance:
 
 **Exploratory Data Analysis (EDA):**
 Conducted in-depth analysis to understand feature distributions, identify outliers, and assess feature-target relationships.
 Feature Engineering:
 ✅ Created interaction and ratio-based features to uncover deeper relationships between variables.
+
 ✅ Applied smoothed target encoding to categorical features and group-wise categorical combinations to enhance signal strength.
+
 ✅ For high-cardinality numerical features, performed quantile binning followed by target-based statistical aggregations.
 
 **Handling Missing Values:**
