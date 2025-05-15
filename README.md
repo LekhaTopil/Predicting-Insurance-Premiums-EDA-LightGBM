@@ -2,46 +2,38 @@
 
 ## 🚀 **Machine Learning | LightGBM | Feature Engineering | Hyperparameter Tuning**
 
-## **Project Overview**
+# **About**
+This notebook documents my approach and learnings from participating in a Kaggle competition focused on predicting insurance premium amounts. The evaluation metric for this competition is **Root Mean Squared Logrithmic Error (RMSLE).** The dataset is split into three parts: train, test, and an original dataset:
 
-In this Kaggle competition, I developed a LightGBM regression model to predict insurance premiums, **achieving an RMSLE score of 1.07**. The dataset consisted of **1.4M** training and **800K** test observations, requiring extensive EDA, missing value handling (**3% to 30%**), and feature engineering—with **four features ranking in the top 10** for model importance.
+* Train: 1.2 million records
+* Test: 800,000 records
+* Original: 278,860 records
+  
+## **Goal**
+* The objective is to accurately predict the premium_amount for each policyholder, optimizing the model for **RMSLE.**
 
-## 🔹 **Key Techniques Used:**
+## **Challenges**
+* **Missing Data:** Several features contain missing values, ranging from **2% to over 30%.**
+* **Outliers:** Columns like **`annual_income`** and **`health_score`** contain extreme values. These values were retained as they likely reflect real-world variability across individuals.
+* **Weak Correlation with Target Variable:** The dataset lacks strong linear relationships with the target variable. For instance, the highest observed correlation was just **0.047** between previous_claim and premium_amount, indicating minimal direct predictive power.
 
-•	**Exploratory Data Analysis (EDA):** Identified data distribution, outliers, and feature relationships.
+## **Approach**
+* To address these challenges and enhance model performance:
 
-•	**Handling Missing Data:** Applied group-wise median imputation for efficiency.
+**Exploratory Data Analysis (EDA):**
+Conducted in-depth analysis to understand feature distributions, identify outliers, and assess feature-target relationships.
+Feature Engineering:
+✅ Created interaction and ratio-based features to uncover deeper relationships between variables.
+✅ Applied smoothed target encoding to categorical features and group-wise categorical combinations to enhance signal strength.
+✅ For high-cardinality numerical features, performed quantile binning followed by target-based statistical aggregations.
 
-•	**Feature Engineering & Selection:** Created impactful features, boosting model performance.
+**Handling Missing Values:**
+* Applied median imputation for numerical features and mode imputation for categorical features using SimpleImputer within each fold via ColumnTransformer, ensuring no data leakage during cross-validation.
+  
+**Cross-Validation Strategy:**
+* Employed 5-fold cross-validation.
+* All feature engineering steps including missing value imputation, target encoding, and aggregation were performed within each fold to prevent data leakage.
 
-•	**Target Variable Transformation:** Applied log transformation to stabilize variance.
-
-•	**Hyperparameter Tuning:** Used RandomizedSearchCV for efficient optimization.
-
-•	**Stratified Sampling for Model Training:** Ensured balanced representation of premium amounts.
-
-## 🎯 **Final Results:** 
-
-•	**Initial RMSLE Score:** **1.15912**
-
-•	**Optimized RMSLE Score:** **1.07849**
-
-## 🔹 **Dataset Details**
-
-•	**Train Set:** **1.4M** observations
-
-•	**Test Set:** **800K** observations
-
-•	**Target Variable:** **premium_amount**
-
-
-## **Approach & Methodology**  
-
-✔ **Data Preprocessing:** Cleaned missing values and optimized categorical encoding.
-
-✔ **Feature Engineering:** Created new variables that enhanced model interpretability.
-
-✔ **Model Selection:** Implemented LightGBM, leveraging its efficiency with large datasets.
-
-✔ **Hyperparameter Tuning:** Used RandomizedSearchCV to optimize performance.
-
+**Model**
+* Implemented and trained a LightGBM model using the engineered feature set.
+* Manually selected model hyperparameters through iterative experimentation and validation.
