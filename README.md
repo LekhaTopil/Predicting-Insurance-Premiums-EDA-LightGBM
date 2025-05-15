@@ -1,6 +1,6 @@
 # **Insurance Premium Prediction - Kaggle Competition**
 
-## 🚀 **Machine Learning | LightGBM | Feature Engineering | Hyperparameter Tuning**
+## 🚀 **Machine Learning | LightGBM | Feature Engineering**
 
 # **About**
 This notebook documents my approach and learnings from participating in a Kaggle competition focused on predicting insurance premium amounts. The evaluation metric for this competition is **Root Mean Squared Logrithmic Error (RMSLE).** The dataset is split into three parts: train, test, and an original dataset:
