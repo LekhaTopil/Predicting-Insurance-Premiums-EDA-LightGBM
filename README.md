@@ -23,6 +23,7 @@ To address these challenges and enhance model performance:
 **Exploratory Data Analysis (EDA):**
 Conducted in-depth analysis to understand feature distributions, identify outliers, and assess feature-target relationships.
 Feature Engineering:
+
 ✅ Created interaction and ratio-based features to uncover deeper relationships between variables.
 
 ✅ Applied smoothed target encoding to categorical features and group-wise categorical combinations to enhance signal strength.
@@ -30,12 +31,12 @@ Feature Engineering:
 ✅ For high-cardinality numerical features, performed quantile binning followed by target-based statistical aggregations.
 
 **Handling Missing Values:**
-* Applied median imputation for numerical features and mode imputation for categorical features using SimpleImputer within each fold via ColumnTransformer, ensuring no data leakage during cross-validation.
+* Applied median imputation for numerical features and mode imputation for categorical features using **SimpleImputer** within each fold via **ColumnTransformer,** ensuring **no data leakage** during cross-validation.
   
 **Cross-Validation Strategy:**
-* Employed 5-fold cross-validation.
+* Employed **5-fold cross-validation.**
 * All feature engineering steps including missing value imputation, target encoding, and aggregation were performed within each fold to prevent data leakage.
 
 **Model**
-* Implemented and trained a LightGBM model using the engineered feature set.
+* Implemented and trained a **LightGBM model** using the engineered feature set.
 * Manually selected model hyperparameters through iterative experimentation and validation.
